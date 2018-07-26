@@ -3,7 +3,7 @@ angular.module('TodoListManager', [])
 		'use strict';
 
 		var routeConfig ={
-			controller: 'todoCtrl',
+			controller: 'ToDoListController',
 			templateUrl: 'template.html'
 		};
 
