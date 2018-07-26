@@ -1,5 +1,11 @@
-$ukuran: 50%;
+$primary: #4286f4;
+$ukuran: 26px;
 
-li {
+body{
+  font-family: Helvetica, sans-serif;
+}
+
+li{
+  background: $primary;
   font-size: $ukuran;
 }
