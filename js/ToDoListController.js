@@ -11,10 +11,10 @@
             var showList = this;
                 showList.items = ToDoListService.getTodoList();
                 showList.newItem = "";
-                showList.completeToDoItem = function(itemIdex){
-            var itemName = showList.items[itemIdex]["name"];
+                showList.completeToDoItem = function(itemIndex){
+            var itemName = showList.items[itemIndex]["name"];
             ToDoListService.addCompletedItem(itemName);
-            ToDoListService.removeToDoItem(itemIdex);
+            ToDoListService.removeToDoItem(itemIndex);
                 };
                 
                 showList.deleteToDoItem = function(itemIndex){
@@ -43,8 +43,8 @@
             service.getCompletedList = function () {
             return completedList;
             };
-            service.removeToDoItem = function (itemIdex) {
-            todoList.splice(itemIdex, 1);
+            service.removeToDoItem = function (itemIndex) {
+            todoList.splice(itemIndex, 1);
             };
             service.removeCompletedItem = function(itemIndex){
                 completedList.splice(itemIndex,1);
@@ -57,7 +57,7 @@
                 todoList.push(item);
             };
             service.addCompletedItem = function(itemName){
-            var finalStr = itemName + ' completed on - ' +  $filter('date')(new Date(), 'yyyy-MM-dd hh:mm');
+            var finalStr = itemName;;
             var item = {
                 name: finalStr
                 };
